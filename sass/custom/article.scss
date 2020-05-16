@@ -1,0 +1,169 @@
+.article-section {
+	padding-top: 0;
+
+	.article-image {
+		position: relative;
+		max-height: 50vh;
+		overflow: hidden;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+
+		&:after {
+			content: " ";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: linear-gradient(to top,#00000053,#00000011);
+		}
+	}
+}
+
+.article {
+	.article-container {
+		padding: 0 2em;
+		margin: 0 auto;
+		max-width: 700px;
+	}
+
+	.article-header {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		margin-top: 3em;
+		margin-bottom: 3em;
+		border-top: 4px solid $dark;
+		border-bottom: 2px solid $dark;
+
+		.article-title {
+			font-size: 4em;
+			margin-bottom: 0.7em;
+		}
+
+		.article-meta {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			.article-author {
+				a {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.article-featured {
+	margin-bottom: 4em;
+
+	.article-featured-label {
+		margin-bottom: 2em;
+	}
+
+	.article-featured-author span {
+		color: $white;
+		font-weight: 900;
+	}
+
+	.article-featured-image {
+		margin: (-$box-padding);
+		margin-top: 2em;
+
+		img {
+			display: block;
+		}
+	}
+
+	.article-featured-date {
+		margin-left: 1em;
+	}
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.article-vertical {
+	margin-bottom: 2em;
+	padding: 0;
+	position: relative;
+
+	.article-vertical-title {
+		color: white;
+		font-size: 1.3em;
+	}
+
+	.article-vertical-image {
+		min-height: 12em;
+		background-color: $dark;
+		img {
+			display: block;
+		}
+
+		&:after {
+			content: " ";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: linear-gradient(to top,#00000053,#00000011);
+		}
+	}
+	
+	.article-vertical-headline-container {
+		padding: 1em;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.article-vertical-author {
+			color: $white;
+			font-weight: 700;
+		}
+	}
+	
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.article-horizontal {
+	margin-bottom: 2em;
+
+	.article-horizontal-title {
+		font-size: 1.3em;
+	}
+
+	.article-horizontal-image {
+		min-height: 12em;
+		margin: (-$box-padding);
+		background-color: $dark;
+
+		@include mobile {
+			margin-bottom: 0;
+		}
+		@include desktop {
+			margin-right: 0;
+		}
+		img {
+			display: block;
+		}
+	}
+
+	.article-horizontal-headline-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+

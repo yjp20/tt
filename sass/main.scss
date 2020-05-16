@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@import url('');
+
+$family-serif: "IBM Plex Serif", serif;
+$family-sans-serif: "Muli", sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: $family-sans-serif;
+$column-gap: 0.8rem;
+$box-radius: 0;
+
+$fullhd-enabled: false;
+
+/* colors */
+
+$orange: rgb(227,111,30);
+$blue: #0060a0;
+$gray: #2b2d32;
+$dark: #222;
+$primary: $orange;
+
+@import "bulma/bulma.sass";
+
+.section-header {
+	border-top: 5px solid $dark;
+	margin-bottom: 1em;
+}
+
+.title,
+.navbar-brand .navbar-item {
+	color: $dark;
+	font-weight: 900;
+}
+
+.navbar-brand .navbar-item {
+	line-height: 0.9em;
+}
+
+.navbar-item {
+	font-weight: 700;
+
+	.home & {
+		align-self: end;
+	}
+}
+
+.home .navbar-search {
+	height: 2.35em;
+}
+
+.section-label {
+	font-weight: 900;
+}
+
+.home .navbar {
+	padding-top: 4em;
+}
+
+.home .navbar-brand .navbar-item {
+	font-size: 4em;
+}
+
+#reading-progress {
+	position: fixed;
+	width: 100%;
+	display: block;
+	height: 5px;
+	z-index: 10;
+}
+
+#social-share {
+	i {
+		width: 2em;
+		height: 2em;
+		padding: 0.5em;
+		text-align: center;
+		border: 1px solid $link;
+		border-radius: 50%;
+		color: $link;
+
+		&:hover {
+			color: $link-hover;
+			border: 1px solid $link-hover;
+		}
+	}
+}
+
+.author-box {
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+	border: 2px solid $dark;
+
+	.author-avatar {
+		width: 4rem;
+		height: 4rem;
+
+		img {
+			background-color: white;
+			filter: grayscale(100%);
+			display: block;
+			border-radius: 50%;
+		}
+	}
+
+	.author-name {
+		font-size: 1.3em;
+
+		a {
+			color: $dark;
+		}
+	}
+}
+
+.related-posts {
+	margin-top: 8em;
+
+	.related-posts-number {
+		font-size: 0.8em;
+		font-weight: 900;
+		margin-bottom: 0.5em;
+		color: $primary;
+	}
+
+	.related-posts-item {
+		border-bottom: 1px solid #ccc;
+		padding: 1.2em 0 0.8em;
+
+		a {
+			font-weight: 400;
+			color: black;
+		}
+	}
+
+}
+
+body {
+	background-color: #f9f9f9;
+}
+
+.search-form {
+	min-width: 300px;
+}
+
+.widget {
+	margin-bottom: 2rem;
+}
+
+@import "custom/article";
+@import "custom/comments.sass";
