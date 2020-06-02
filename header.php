@@ -4,7 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link href="https://fonts.googleapis.com/css2?family=Muli:wght@900|IBM+Plex+Serif:wght@400,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -16,19 +16,15 @@
 			<div class="container">
 				<div class="navbar-brand">
 					<a href="<?php echo get_home_url() ?>" class="navbar-item"> <?php echo get_bloginfo( 'name' ); ?> </a>
-					<a class="navbar-burger burger" data-target="primary-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
+					<div class="navbar-item is-hidden-desktop navbar-social-touch"> <?php echo social_buttons() ?> </div>
 				</div>
-				<div class="navbar-item"> <?php the_title() ?> </div>
-				<div class="navbar-end">
+				<div class="navbar-item is-hidden-touch"> <?php the_title() ?> </div>
+				<div class="navbar-end is-hidden-touch">
 					<div class="navbar-item"> <?php echo social_buttons() ?> </div>
 				</div>
 			</div>
 		</nav>
-		<progress id="reading-progress" value="0"/>
+		<progress class="progress is-primary" id="reading-progress" value="0"/>
 		<?php else : ?>
 		<nav class="navbar has-shadow">
 			<div class="container">

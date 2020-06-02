@@ -6,7 +6,7 @@
 			</div>
 			<div class="media-content">
 				<p class="author-name title"> <?php echo get_the_author_posts_link() ?> </p>
-				<p class="subtitle"> Reporter </p>
+				<p class="subtitle"> <?php echo get_the_author_meta('tt_job') ?> </p>
 			</div>
 		</div>
 		<div class="author-desc">

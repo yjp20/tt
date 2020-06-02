@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import url('');
-
 $family-serif: "IBM Plex Serif", serif;
 $family-sans-serif: "Muli", sans-serif;
 $family-primary: $family-sans-serif;
@@ -26,39 +24,47 @@ $primary: $orange;
 	margin-bottom: 1em;
 }
 
-.title,
-.navbar-brand .navbar-item {
-	color: $dark;
-	font-weight: 900;
-}
-
-.navbar-brand .navbar-item {
-	line-height: 0.9em;
-}
-
-.navbar-item {
-	font-weight: 700;
-
-	.home & {
-		align-self: end;
-	}
-}
-
-.home .navbar-search {
-	height: 2.35em;
-}
-
 .section-label {
 	font-weight: 900;
 }
 
-.home .navbar {
-	padding-top: 4em;
+.title {
+	color: $dark;
+	font-weight: 900;
 }
 
-.home .navbar-brand .navbar-item {
-	font-size: 4em;
+.navbar {
+	.navbar-brand .navbar-item {
+		color: $dark;
+		font-weight: 900;
+		line-height: 0.9em;
+	}
+
+	.navbar-item {
+		font-weight: 700;
+	}
+
+	.navbar-social-mobile {
+		margin-left: auto;
+	}
+
+	.home & {
+		padding-top: 4em;
+
+		.navbar-item {
+			align-self: flex-end;
+		}
+
+		.navbar-search {
+			height: 2.35em;
+		}
+
+		.navbar-brand .navbar-item {
+			font-size: 4em;
+		}
+	}
 }
+
 
 #reading-progress {
 	position: fixed;

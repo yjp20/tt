@@ -5,4 +5,4 @@ build_sass:
 	sass ./sass/main.scss ./tt.css
 
 build_zip:
-	zip -r tt-theme.zip . -x '*.git*' -x 'sass/bulma/docs/*'
+	zip -r tt-theme.zip . -x '*.git*' -x 'sass/*'
